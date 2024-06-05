@@ -1,0 +1,1 @@
+begin x=in(y); a=0; b=0; if (x<5) then {x=0;} else {x=2; b=10;} out(x); out(a);out(b); end
