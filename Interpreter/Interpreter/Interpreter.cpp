@@ -55,13 +55,25 @@ void Interpreter::ChangeToConst(int& result) {
     not_stack.back().PS_Element_Type = Parser::PS_Type::Const;
     not_stack.back().num = result;
 }
-
 void Interpreter::in() {
-    if (not_stack.back().PS_Element_Type != Parser::PS_Type::Var) Shit(2);
+    //if (not_stack.back().PS_Element_Type != Parser::PS_Type::Var) Shit(2);
     cout << endl << "Value: ";
     int result;
     cin >> result;
-    this->ChangeToConst(result);
+    string name = not_stack.back().PS_Element_Name;
+    ptr->data.Var_Map[name] = result;
+    
+    switch (not_stack.back().PS_Element_Type) {
+    case Parser::PS_Type::Var:
+        ptr->data.Var_Map[name] = result;
+        break;
+    case Parser::PS_Type::Const:
+        if (name == key) this->ChangeMassValue(result);
+        else Shit(4);
+        break;
+    }
+    not_stack.pop_back();
+    this->ResetMass();
 }
 
 void Interpreter::out() {

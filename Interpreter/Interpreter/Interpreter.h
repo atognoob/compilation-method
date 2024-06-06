@@ -13,7 +13,7 @@ public:
 
     int index;
     Interpreter(Parser& Data);
-    void Interpretation();
+    void Interpretation(); //
     void ChooseOperation(Parser::PS_Element& operation);
     int TakeMassValue(string& s, int& c);
     void ChangeMassValue(int& value);

@@ -1,0 +1,20 @@
+//complex formula
+begin x=4; y=6; b=3; x = x*(y+b); out(x); end
+
+//in - out
+begin in(x); if (x<5) then {x=0;} else {x=2;} out(x); end
+
+//array
+begin mass A[4]; in(A[2]); out(A[2]); end
+
+
+a+b
+
+result=0
+
+ab+
+
+*
+
+//sort array
+begin mass A[6]; i = 0; while(i < 6) do {in(A[i]); i = i+1;} i = 1; max = 0; while(i < 6) do { if(A[i-1]>A[i]) then {max = A[i]; A[i] = A[i-1]; A[i-1] = max; i = 1;} else {i=i+1;}}i = 0; while(i < 6) do {out(A[i]); i = i+1;} end

@@ -27,6 +27,7 @@ void Parser::Next_State()
         default:
         {
             string message = "Parser error, position: " + to_string(current_token.getPosition());
+            std::cout << message << std::endl;
             throw runtime_error(message);
         }
         }
@@ -83,6 +84,25 @@ void Parser::Next_State()
 
             break;
         }
+        case TokenType::In:
+        {
+            Automate_Stack.emplace(State::B);
+            Automate_Stack.emplace(TokenType::Semicolon);
+            Automate_Stack.emplace(TokenType::RRb);
+            Automate_Stack.emplace(State::H);
+            Automate_Stack.emplace(TokenType::Var);
+            Automate_Stack.emplace(TokenType::LRb);
+            Automate_Stack.emplace(TokenType::In);
+
+            Automate_Generator.emplace(Generator_program::Empty);
+            Automate_Generator.emplace(Generator_program::In);
+            Automate_Generator.emplace(Generator_program::Empty);
+            Automate_Generator.emplace(Generator_program::Empty);
+            Automate_Generator.emplace(Generator_program::Var);
+            Automate_Generator.emplace(Generator_program::Empty);
+            Automate_Generator.emplace(Generator_program::Empty);
+            break;
+        }
         default:
         {
             break;
@@ -133,28 +153,11 @@ void Parser::Next_State()
             Automate_Generator.emplace(Generator_program::Const);
             break;
         }
-        case TokenType::In:
-        {
-            Automate_Stack.emplace(State::T_tilda);
-            Automate_Stack.emplace(State::F_tilda);
-            Automate_Stack.emplace(TokenType::RRb);
-            Automate_Stack.emplace(State::H);
-            Automate_Stack.emplace(TokenType::Var);
-            Automate_Stack.emplace(TokenType::LRb);
-            Automate_Stack.emplace(TokenType::In);
-
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::In);
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::Var);
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::Empty);
-            break;
-        }
+        
         default:
         {
             string message = "Parser error, position: " + to_string(current_token.getPosition());
+            std::cout << message << std::endl;
             throw runtime_error(message);
         }
         }
@@ -230,23 +233,7 @@ void Parser::Next_State()
             Automate_Generator.emplace(Generator_program::Const);
             break;
         }
-        case TokenType::In:
-        {
-            Automate_Stack.emplace(State::F_tilda);
-            Automate_Stack.emplace(TokenType::RRb);
-            Automate_Stack.emplace(State::H);
-            Automate_Stack.emplace(TokenType::Var);
-            Automate_Stack.emplace(TokenType::LRb);
-            Automate_Stack.emplace(TokenType::In);
-
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::In);
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::Var);
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::Empty);
-            break;
-        }
+        
         default:
         {
             string message = "Parser error, position: " + to_string(current_token.getPosition());
@@ -319,24 +306,11 @@ void Parser::Next_State()
             Automate_Generator.emplace(Generator_program::Const);
             break;
         }
-        case TokenType::In:
-        {
-            Automate_Stack.emplace(TokenType::RRb);
-            Automate_Stack.emplace(State::H);
-            Automate_Stack.emplace(TokenType::Var);
-            Automate_Stack.emplace(TokenType::LRb);
-            Automate_Stack.emplace(TokenType::In);
-
-            Automate_Generator.emplace(Generator_program::In);
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::Var);
-            Automate_Generator.emplace(Generator_program::Empty);
-            Automate_Generator.emplace(Generator_program::Empty);
-            break;
-        }
+        
         default:
         {
             string message = "Parser error, position: " + to_string(current_token.getPosition());
+            std::cout << message << std::endl;
             throw runtime_error(message);
         }
         }
@@ -468,6 +442,25 @@ void Parser::Next_State()
 
             Automate_Generator.emplace(Generator_program::Empty);
             Automate_Generator.emplace(Generator_program::Out);
+            Automate_Generator.emplace(Generator_program::Empty);
+            Automate_Generator.emplace(Generator_program::Empty);
+            Automate_Generator.emplace(Generator_program::Var);
+            Automate_Generator.emplace(Generator_program::Empty);
+            Automate_Generator.emplace(Generator_program::Empty);
+            break;
+        }
+        case TokenType::In:
+        {
+            Automate_Stack.emplace(State::B);
+            Automate_Stack.emplace(TokenType::Semicolon);
+            Automate_Stack.emplace(TokenType::RRb);
+            Automate_Stack.emplace(State::H);
+            Automate_Stack.emplace(TokenType::Var);
+            Automate_Stack.emplace(TokenType::LRb);
+            Automate_Stack.emplace(TokenType::In);
+
+            Automate_Generator.emplace(Generator_program::Empty);
+            Automate_Generator.emplace(Generator_program::In);
             Automate_Generator.emplace(Generator_program::Empty);
             Automate_Generator.emplace(Generator_program::Empty);
             Automate_Generator.emplace(Generator_program::Var);
@@ -908,6 +901,7 @@ void Parser::Run()
                 else
                 {
                     string message = "Parser error, unexpected token: " + to_string(current_token.getPosition());
+                    std::cout << message << std::endl;
                     throw runtime_error(message);
                 }
             }

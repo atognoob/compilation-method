@@ -19,6 +19,7 @@ int main()
             ops.Run();
             cout << endl;
             ops.PrintPolishString();
+            
             Interpreter play(ops);
         }
     }

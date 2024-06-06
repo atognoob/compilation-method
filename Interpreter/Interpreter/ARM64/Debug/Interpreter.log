@@ -1,13 +1,13 @@
 ﻿  Interpreter.cpp
-\\mac\Home\Documents\семестр 6\методы компиляции\Interpreter\Interpreter\Interpreter.cpp(145,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+\\mac\Home\Documents\семестр 6\методы компиляции\-----------------lab\Interpreter\Interpreter\Interpreter.cpp(157,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
   Lexer.cpp
   Parser.cpp
-\\mac\Home\Documents\семестр 6\методы компиляции\Interpreter\Interpreter\Parser.cpp(717,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-\\mac\Home\Documents\семестр 6\методы компиляции\Interpreter\Interpreter\Parser.cpp(726,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-\\mac\Home\Documents\семестр 6\методы компиляции\Interpreter\Interpreter\Parser.cpp(729,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-\\mac\Home\Documents\семестр 6\методы компиляции\Interpreter\Interpreter\Parser.cpp(736,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-\\mac\Home\Documents\семестр 6\методы компиляции\Interpreter\Interpreter\Parser.cpp(741,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
-\\mac\Home\Documents\семестр 6\методы компиляции\Interpreter\Interpreter\Parser.cpp(751,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+\\mac\Home\Documents\семестр 6\методы компиляции\-----------------lab\Interpreter\Interpreter\Parser.cpp(710,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\mac\Home\Documents\семестр 6\методы компиляции\-----------------lab\Interpreter\Interpreter\Parser.cpp(719,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\mac\Home\Documents\семестр 6\методы компиляции\-----------------lab\Interpreter\Interpreter\Parser.cpp(722,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+\\mac\Home\Documents\семестр 6\методы компиляции\-----------------lab\Interpreter\Interpreter\Parser.cpp(729,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+\\mac\Home\Documents\семестр 6\методы компиляции\-----------------lab\Interpreter\Interpreter\Parser.cpp(734,44): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+\\mac\Home\Documents\семестр 6\методы компиляции\-----------------lab\Interpreter\Interpreter\Parser.cpp(744,64): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   main.cpp
   Generating Code...
-  Interpreter.vcxproj -> \\Mac\Home\Documents\семестр 6\методы компиляции\Interpreter\ARM64\Debug\Interpreter.exe
+  Interpreter.vcxproj -> \\Mac\Home\Documents\семестр 6\методы компиляции\-----------------lab\Interpreter\ARM64\Debug\Interpreter.exe
